@@ -1,0 +1,9 @@
+target
+target2
+.classpath
+.project
+.settings
+.factorypath
+gitlab-ci.build.conf
+.allure
+.*.swp

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:panel>
+		<div wicket:id="body">
+			<form wicket:id="form">
+				<div class="row row-form">
+					<div class="col-12">
+						<div class="row row-form-group form-group">
+							<div class="col-sm-4">
+								<label class="col-form-label form-label" wicket:for="name"><wicket:label /></label>
+							</div>
+							<div class="col-sm-8">
+								<input class="form-control" wicket:id="name" type="text" />
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row row-form-group form-group">
+							<div class="col-sm-4">
+								<label class="col-form-label form-label" wicket:for="description"><wicket:label /></label>
+							</div>
+							<div class="col-sm-8">
+								<textarea class="form-control" wicket:id="description" rows="3" />
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row row-form-group form-group">
+							<div class="col-sm-4">
+								<label class="col-form-label form-label pt-0"><wicket:message key="business.userGroup.authorities" /></label>
+							</div>
+							<div class="col-sm-8">
+								<div wicket:id="authorities">
+									<wicket:container wicket:id="authorities">
+										<div class="custom-control custom-checkbox form-control-plaintext">
+											<input type="checkbox" class="custom-control-input" wicket:id="authority">
+											<label class="custom-control-label" wicket:for="authority"><wicket:label /></label>
+										</div>
+									</wicket:container>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<div wicket:id="footer">
+			<button wicket:id="cancel" class="btn btn-outline-secondary" type="button">
+				<wicket:message key="common.cancel" />
+			</button>
+			<button wicket:id="save" class="btn btn-success" type="button">
+				<span class="fa fa-fw fa-check" />
+				<span wicket:id="label" />
+			</button>
+		</div>
+	</wicket:panel>
+</html>
