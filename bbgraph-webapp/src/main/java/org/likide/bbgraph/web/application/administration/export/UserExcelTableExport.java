@@ -11,11 +11,11 @@ import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.repeater.data.IDataProvider;
-import org.likide.bbgraph.core.business.user.model.User;
-import org.likide.bbgraph.core.business.user.model.UserBinding;
 import org.iglooproject.export.excel.ColumnInformation;
 import org.iglooproject.jpa.util.HibernateUtils;
 import org.iglooproject.wicket.more.export.excel.AbstractSimpleExcelTableExport;
+import org.likide.bbgraph.core.business.user.model.User;
+import org.likide.bbgraph.core.business.user.model.UserBinding;
 
 import com.google.common.collect.ImmutableList;
 

@@ -15,6 +15,12 @@
 	
 	<dependencies>
 		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>bbgraph-jpa-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 		<!-- Igloo -->
 		<dependency>
 			<groupId>org.iglooproject.packages</groupId>
@@ -62,10 +68,6 @@
 			</testResource>
 		</testResources>
 		<plugins>
-			<plugin>
-				<groupId>org.bsc.maven</groupId>
-				<artifactId>maven-processor-plugin</artifactId>
-			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>

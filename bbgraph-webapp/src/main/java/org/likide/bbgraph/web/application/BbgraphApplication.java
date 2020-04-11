@@ -12,7 +12,26 @@ import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.resource.loader.ClassStringResourceLoader;
-import org.likide.bbgraph.core.business.common.model.PostalCode;
+import org.iglooproject.jpa.more.business.history.model.embeddable.HistoryValue;
+import org.iglooproject.jpa.security.business.authority.model.Authority;
+import org.iglooproject.spring.property.service.IPropertyService;
+import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleAccessDeniedPage;
+import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleLoginFailurePage;
+import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleLoginSuccessPage;
+import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleSignInPage;
+import org.iglooproject.wicket.bootstrap4.console.template.ConsoleConfiguration;
+import org.iglooproject.wicket.more.application.CoreWicketAuthenticatedApplication;
+import org.iglooproject.wicket.more.console.common.model.ConsoleMenuSection;
+import org.iglooproject.wicket.more.link.descriptor.parameter.CommonParameters;
+import org.iglooproject.wicket.more.markup.html.factory.AbstractComponentFactory;
+import org.iglooproject.wicket.more.markup.html.pages.monitoring.DatabaseMonitoringPage;
+import org.iglooproject.wicket.more.rendering.BooleanRenderer;
+import org.iglooproject.wicket.more.rendering.EnumRenderer;
+import org.iglooproject.wicket.more.rendering.LocaleRenderer;
+import org.iglooproject.wicket.more.security.page.LoginFailurePage;
+import org.iglooproject.wicket.more.security.page.LoginSuccessPage;
+import org.iglooproject.wicket.more.util.convert.HibernateProxyAwareConverterLocator;
+import org.iglooproject.wicket.more.util.listener.FormInvalidDecoratorListener;
 import org.likide.bbgraph.core.business.history.model.atomic.HistoryEventType;
 import org.likide.bbgraph.core.business.user.model.BasicUser;
 import org.likide.bbgraph.core.business.user.model.TechnicalUser;
@@ -25,7 +44,6 @@ import org.likide.bbgraph.web.application.administration.page.AdministrationTech
 import org.likide.bbgraph.web.application.administration.page.AdministrationTechnicalUserListPage;
 import org.likide.bbgraph.web.application.administration.page.AdministrationUserGroupDetailPage;
 import org.likide.bbgraph.web.application.administration.page.AdministrationUserGroupListPage;
-import org.likide.bbgraph.web.application.common.converter.PostalCodeConverter;
 import org.likide.bbgraph.web.application.common.renderer.AuthorityRenderer;
 import org.likide.bbgraph.web.application.common.renderer.UserGroupRenderer;
 import org.likide.bbgraph.web.application.common.renderer.UserRenderer;
@@ -56,26 +74,6 @@ import org.likide.bbgraph.web.application.security.password.page.SecurityPasswor
 import org.likide.bbgraph.web.application.security.password.page.SecurityPasswordExpirationPage;
 import org.likide.bbgraph.web.application.security.password.page.SecurityPasswordRecoveryPage;
 import org.likide.bbgraph.web.application.security.password.page.SecurityPasswordResetPage;
-import org.iglooproject.jpa.more.business.history.model.embeddable.HistoryValue;
-import org.iglooproject.jpa.security.business.authority.model.Authority;
-import org.iglooproject.spring.property.service.IPropertyService;
-import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleAccessDeniedPage;
-import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleLoginFailurePage;
-import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleLoginSuccessPage;
-import org.iglooproject.wicket.bootstrap4.console.navigation.page.ConsoleSignInPage;
-import org.iglooproject.wicket.bootstrap4.console.template.ConsoleConfiguration;
-import org.iglooproject.wicket.more.application.CoreWicketAuthenticatedApplication;
-import org.iglooproject.wicket.more.console.common.model.ConsoleMenuSection;
-import org.iglooproject.wicket.more.link.descriptor.parameter.CommonParameters;
-import org.iglooproject.wicket.more.markup.html.factory.AbstractComponentFactory;
-import org.iglooproject.wicket.more.markup.html.pages.monitoring.DatabaseMonitoringPage;
-import org.iglooproject.wicket.more.rendering.BooleanRenderer;
-import org.iglooproject.wicket.more.rendering.EnumRenderer;
-import org.iglooproject.wicket.more.rendering.LocaleRenderer;
-import org.iglooproject.wicket.more.security.page.LoginFailurePage;
-import org.iglooproject.wicket.more.security.page.LoginSuccessPage;
-import org.iglooproject.wicket.more.util.convert.HibernateProxyAwareConverterLocator;
-import org.iglooproject.wicket.more.util.listener.FormInvalidDecoratorListener;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.google.common.collect.ImmutableList;
@@ -142,8 +140,6 @@ public class BbgraphApplication extends CoreWicketAuthenticatedApplication {
 		
 		converterLocator.set(HistoryValue.class, HistoryValueRenderer.get());
 		converterLocator.set(HistoryEventType.class, EnumRenderer.get());
-		
-		converterLocator.set(PostalCode.class, PostalCodeConverter.get());
 		
 		return new HibernateProxyAwareConverterLocator(converterLocator);
 	}

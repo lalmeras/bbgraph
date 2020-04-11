@@ -2,8 +2,8 @@ package org.likide.bbgraph.core.business.notification.service;
 
 import java.util.Date;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.spring.notification.model.INotificationContentDescriptor;
+import org.likide.bbgraph.core.business.user.model.User;
 
 public interface IBbgraphNotificationContentDescriptorFactory {
 

@@ -3,10 +3,10 @@ package org.likide.bbgraph.core.business.user.search;
 import java.util.List;
 
 import org.apache.lucene.search.SortField;
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.business.generic.model.GenericEntity;
 import org.iglooproject.jpa.more.business.sort.ISort;
 import org.iglooproject.jpa.more.business.sort.SortUtils;
+import org.likide.bbgraph.core.business.user.model.User;
 
 import com.google.common.collect.ImmutableList;
 

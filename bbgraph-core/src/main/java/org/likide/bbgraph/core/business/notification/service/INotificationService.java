@@ -1,7 +1,7 @@
 package org.likide.bbgraph.core.business.notification.service;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.exception.ServiceException;
+import org.likide.bbgraph.core.business.user.model.User;
 
 public interface INotificationService {
 

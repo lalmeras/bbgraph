@@ -2,10 +2,10 @@ package org.likide.bbgraph.web.application.common.renderer;
 
 import java.util.Locale;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.wicket.more.markup.html.bootstrap.common.model.BootstrapColor;
 import org.iglooproject.wicket.more.markup.html.bootstrap.common.renderer.BootstrapRenderer;
 import org.iglooproject.wicket.more.markup.html.bootstrap.common.renderer.BootstrapRendererInformation;
+import org.likide.bbgraph.core.business.user.model.User;
 
 public abstract class UserActiveRenderer extends BootstrapRenderer<User> {
 

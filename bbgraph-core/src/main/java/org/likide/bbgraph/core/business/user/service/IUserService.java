@@ -2,10 +2,10 @@ package org.likide.bbgraph.core.business.user.service;
 
 import java.util.List;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.exception.SecurityServiceException;
 import org.iglooproject.jpa.exception.ServiceException;
 import org.iglooproject.jpa.security.business.person.service.IGenericUserService;
+import org.likide.bbgraph.core.business.user.model.User;
 
 public interface IUserService extends IGenericUserService<User> {
 

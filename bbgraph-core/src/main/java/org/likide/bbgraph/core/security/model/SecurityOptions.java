@@ -3,9 +3,9 @@ package org.likide.bbgraph.core.security.model;
 import java.util.Collections;
 import java.util.Set;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.commons.util.collections.CollectionUtils;
 import org.iglooproject.jpa.security.password.rule.SecurityPasswordRulesBuilder;
+import org.likide.bbgraph.core.business.user.model.User;
 import org.passay.Rule;
 
 import com.google.common.collect.Sets;

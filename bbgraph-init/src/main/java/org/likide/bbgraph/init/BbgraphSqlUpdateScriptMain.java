@@ -31,7 +31,7 @@ public final class BbgraphSqlUpdateScriptMain extends AbstractBbgraphMain {
 				action = args[0];
 			} else {
 				fileName = "/tmp/script.sql";
-				action = "create";
+				action = "update";
 			}
 			
 			SqlUpdateScript.writeSqlDiffScript(context, fileName, action);

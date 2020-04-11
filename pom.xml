@@ -73,9 +73,11 @@
 		<url>https://gitlab.tools.kobalt.fr/kobalt/${projectName}</url>
 		<tag>HEAD</tag>
 	</scm>
-	
-<modules>  <module>bbgraph-core</module>
-    <module>bbgraph-init</module>
-    <module>bbgraph-webapp</module>
-  </modules>
+
+	<modules>
+		<module>bbgraph-core</module>
+		<module>bbgraph-init</module>
+		<module>bbgraph-webapp</module>
+		<module>bbgraph-jpa-model</module>
+	</modules>
 </project>

@@ -2,10 +2,10 @@ package org.likide.bbgraph.core.business.user.dao;
 
 import java.util.List;
 
-import org.likide.bbgraph.core.business.user.model.QUser;
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.security.business.person.dao.GenericUserDaoImpl;
 import org.iglooproject.spring.util.StringUtils;
+import org.likide.bbgraph.core.business.user.model.QUser;
+import org.likide.bbgraph.core.business.user.model.User;
 import org.springframework.stereotype.Repository;
 
 import com.querydsl.jpa.impl.JPAQuery;

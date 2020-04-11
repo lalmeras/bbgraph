@@ -2,8 +2,8 @@ package org.likide.bbgraph.web.application.common.renderer;
 
 import java.util.Locale;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.wicket.more.rendering.Renderer;
+import org.likide.bbgraph.core.business.user.model.User;
 
 public abstract class UserRenderer extends Renderer<User> {
 

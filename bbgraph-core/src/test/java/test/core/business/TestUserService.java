@@ -4,10 +4,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.exception.SecurityServiceException;
 import org.iglooproject.jpa.exception.ServiceException;
 import org.junit.Test;
+import org.likide.bbgraph.core.business.user.model.User;
 
 import test.core.AbstractBbgraphTestCase;
 

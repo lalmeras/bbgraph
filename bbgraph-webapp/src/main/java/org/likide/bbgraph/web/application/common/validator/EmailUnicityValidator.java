@@ -3,7 +3,6 @@ package org.likide.bbgraph.web.application.common.validator;
 import org.apache.wicket.injection.Injector;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-
 import org.likide.bbgraph.core.business.user.model.User;
 import org.likide.bbgraph.core.business.user.service.IUserService;
 import org.iglooproject.wicket.more.util.validate.validators.AbstractUnicityValidator;

@@ -11,12 +11,11 @@ import javax.persistence.OrderColumn;
 
 import org.bindgen.Bindable;
 import org.hibernate.annotations.Type;
-
-import com.google.common.collect.Lists;
-
-import org.likide.bbgraph.core.config.hibernate.TypeDefinitions;
 import org.iglooproject.commons.util.CloneUtils;
 import org.iglooproject.commons.util.collections.CollectionUtils;
+import org.likide.bbgraph.core.business.TypeDefinitions;
+
+import com.google.common.collect.Lists;
 
 @Embeddable
 @Bindable

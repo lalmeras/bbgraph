@@ -2,8 +2,8 @@ package org.likide.bbgraph.web.application.common.renderer;
 
 import java.util.Locale;
 
-import org.likide.bbgraph.core.business.user.model.UserGroup;
 import org.iglooproject.wicket.more.rendering.Renderer;
+import org.likide.bbgraph.core.business.user.model.UserGroup;
 
 public abstract class UserGroupRenderer extends Renderer<UserGroup> {
 

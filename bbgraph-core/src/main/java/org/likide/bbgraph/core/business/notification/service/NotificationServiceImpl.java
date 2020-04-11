@@ -3,10 +3,10 @@ package org.likide.bbgraph.core.business.notification.service;
 import java.util.Date;
 import java.util.Locale;
 
-import org.likide.bbgraph.core.business.user.model.User;
 import org.iglooproject.jpa.exception.ServiceException;
 import org.iglooproject.spring.notification.model.SimpleRecipient;
 import org.iglooproject.spring.notification.service.AbstractNotificationServiceImpl;
+import org.likide.bbgraph.core.business.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

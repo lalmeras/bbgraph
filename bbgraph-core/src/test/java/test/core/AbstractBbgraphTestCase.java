@@ -1,8 +1,5 @@
 package test.core;
 
-import org.likide.bbgraph.core.business.referencedata.service.ICityService;
-import org.likide.bbgraph.core.business.user.service.IUserGroupService;
-import org.likide.bbgraph.core.business.user.service.IUserService;
 import org.iglooproject.jpa.exception.SecurityServiceException;
 import org.iglooproject.jpa.exception.ServiceException;
 import org.iglooproject.jpa.more.business.upgrade.service.IDataUpgradeRecordService;
@@ -12,6 +9,8 @@ import org.iglooproject.jpa.security.business.authority.util.CoreAuthorityConsta
 import org.iglooproject.spring.property.dao.IMutablePropertyDao;
 import org.iglooproject.spring.property.service.IPropertyService;
 import org.iglooproject.test.jpa.junit.AbstractTestCase;
+import org.likide.bbgraph.core.business.user.service.IUserGroupService;
+import org.likide.bbgraph.core.business.user.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -26,9 +25,6 @@ public abstract class AbstractBbgraphTestCase extends AbstractTestCase {
 	@Autowired
 	protected IUserService userService;
 
-	@Autowired
-	protected ICityService cityService;
-	
 	@Autowired
 	protected IUserGroupService userGroupService;
 	
