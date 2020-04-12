@@ -36,7 +36,7 @@ alter table ${schema}.City add constraint UKcici6ao6snb79g0i2ebsix408 unique (la
 alter table ${schema}.DataUpgradeRecord add constraint UK_6q54k3x0axoc3n8ns55emwiev unique (name);
 create index idx_HistoryDifference_parentLog on ${schema}.HistoryDifference (parentLog_id);
 create index idx_HistoryDifference_parentDifference on ${schema}.HistoryDifference (parentDifference_id);
-alter table ${schema}.Parameter add constraint UK_k31gbcltpas6ux95qpk19o6q5 unique (name);
+alter table ${schema}.Parameter add constraint UK_6y3o26o4ukqaqks2k5wo76ua7 unique (name);
 alter table ${schema}.user_ add constraint UK_q1sdxrqyk0i3sw35q3m92sx3m unique (username);
 alter table ${schema}.Authority_customPermissionNames add constraint FK6uqor94s0128ryjrrdw84f67x foreign key (Authority_id) references ${schema}.Authority;
 alter table ${schema}.BasicUser add constraint FKhjnq1hls89k8qbs2hpap2i09j foreign key (id) references ${schema}.user_;
