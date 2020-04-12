@@ -10,11 +10,17 @@ import org.iglooproject.jpa.exception.ServiceException;
 import org.iglooproject.jpa.more.util.init.service.IImportDataService;
 import org.iglooproject.jpa.search.service.IHibernateSearchService;
 import org.iglooproject.jpa.util.EntityManagerUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SpringContextWrapper {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(SpringContextWrapper.class);
 
 	@Autowired
 	private IHibernateSearchService hibernateSearchService;
@@ -26,10 +32,17 @@ public class SpringContextWrapper {
 	private EntityManagerFactory entityManagerFactory;
 
 	@Autowired
+	private NamedParameterJdbcTemplate jdbcTemplate;
+
+	@Autowired
 	private IImportDataService importDataService;
 
 	public void importDirectory(File directory) throws ServiceException, SecurityServiceException, IOException {
-		importDataService.importDirectory(directory);
+		//importDataService.importDirectory(directory);
+		
+		Integer count = jdbcTemplate.queryForObject("select count(*) from graph_graph",
+				(SqlParameterSource) null, (rs, i) -> rs.getInt(1));
+		LOGGER.warn("{} graphs");
 	}
 
 	public void reindexAll() throws ServiceException {
